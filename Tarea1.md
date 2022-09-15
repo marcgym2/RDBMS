@@ -19,7 +19,13 @@ Ejemplos de Datos No Estructurados:
 
 ## Data set: California Traffic Collision Data from SWITRS
 
-Se trabaja con la base de datos de cada colisión de tránsito reportada desde 2001 hasta el 2020 en el estado de California, Estados Unidos. 
+Se trabaja con la base de datos de cada colisión de tránsito reportada desde 2001 hasta el 2020 en el estado de California, Estados Unidos. La base de datos esta compuesta por 3 tablas: 
+
+* collisions: contiene información relacionada al choques, su ubicación, vehículos, entre otros. 
+* parties: contiene información sobre las personas involucradas en los choques, como edad, sexo, ebriedad, etc. 
+* victims: contiene información relacionada a lesiones de las personas involucradas. 
+
+Se pide analizar la presente base de datos con el propósito de conocer moda, mediana y media de los accidentes por día, por tipo de vehículo, así como visualización de los datos. 
 
 ```mermaid
 graph TD;
