@@ -24,9 +24,9 @@ Se trabaja con la base de datos de cada colisión de tránsito reportada desde 2
 ```mermaid
 graph TD;
     
-    California_Traffic_Collisions_DataBase-->Collisions;
-    Parties-->Victims;
-    Collisions-->Parties;
+    California_Traffic_Collisions_DataBase-->collisions;
+    parties-->victims;
+    collisions-->parties;
     
 
 ```
@@ -194,4 +194,5 @@ Personalmente he decidido aprender PostgreSQL debido a que es muy solicitado por
 
 * Petrov, A., 2019. Database Internals. [S.l.]: O'Reilly Media, Inc.
 
+* California Traffic Collision Data from SWITRS. (2021, 29 agosto). Kaggle. Recuperado 15 de septiembre de 2022, de https://www.kaggle.com/datasets/alexgude/california-traffic-collision-data-from-switrs
 
