@@ -1,6 +1,6 @@
 <!-- Tarea 1. Preliminares-->
 
-# 1. Preliminares
+# 1.- Preliminares
 ### Base de Datos y sus relaciones de manera no estructurada. 
 
 Una *base de datos* es un tipo de tecnología para el almacenamiento de datos. 
