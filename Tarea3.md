@@ -31,13 +31,23 @@ location(id, case_id, country_location, population, party_number_killed, party_n
 ![Diagrama Relacional](DiagramaRelacional.png)
 
 
- **Accidentes por condado:**
+**Posible causas por accidente:**
 
 
-Π id, case_id, county_location(location)
+Π case_id, pcf_violation_category (collisions)
 
 ```
-location(id, case_id, country_location)
+collisions(case_id, pcf_violation_category)
+```
+
+
+ **Accidentes sobre el tiempo:**
+
+
+Π case_id, collision_date (collisions)
+
+```
+collisions(case_id, collision_date)
 ```
 
 
