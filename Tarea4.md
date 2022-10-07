@@ -88,6 +88,41 @@ CREATE TABLE IF NOT EXISTS parties (
 
 ```
 
+
+
+```
+
+DELETE FROM collisions;
+INSERT INTO collisions (case_id, oficcer_id, primary_collision_factor, pcf_violation_category, type_of_collision, movement_preceding_collision, weather, lighting, road_surface, road_condition, collision_date, collision_time)
+VALUES
+	(3899490,11342,'vehicle code violation','speeding','rear end','proceeding straight','cloudy','daylight','dry','normal', '2020/03/14', '7:45:00'),
+	(3899493,8945,'vehicle code violation','speeding', 'hit object','proceeding straight','clear','dark with street lights','dry','normal','2020/07/26', '2:50:00'),
+	(3858022,17242,'other improper driving','other improper driving','rear end','proceeding straight','clear','daylight','dry','normal','2009/02/03','17:11:00'),
+	(3899441,17248,'vehicle code violation','improper turning','hit object','proceeding straight','clear','dark with no street lights','dry','normal','2009/02/28','1:45:00'),
+	(3899442,19005,'vehicle code violation','speeding','sideswipe','proceeding straight','raining','daylight','wet','normal','2009/02/09', '10:20:00'),
+	(3899445,19284,'vehicle code violation','improper turning','sideswipe','proceeding straight','clear','daylight','dry','normal','2009/02/18', '15:50:00'),
+	(3899446,19289,'vehicle code violation','speeding','rear end','proceeding straight','cloudy','dusk or dawn','dry','normal','11/02/09','17:35:00'),
+	(3899449,19374,'vehicle code violation','speeding','rear end','proceeding straight','clear','dark with no street lights','dry','normal','2009/02/11','21:20:00'),
+	(3899450,19374,'vehicle code violation','speeding','rear end','other','clear','dark with no street lights','dry','normal','2009/02/13', '20:40:00'),
+	(3899453,18723,'vehicle code violation','speeding','rear end','proceeding straight','clear','dark with no street lights','wet','normal','2009/02/13', '18:20:00'),
+	(3899454,19021,'vehicle code violation','pedestrian violation','pedestrian','proceeding straight','cloudy','dark with street lights','wet','normal','2009/02/13','18:20:00'),
+	(3899457,14654,'vehicle code violation','unsafe lane change','sideswipe','proceeding straight','clear','daylight','dry','normal','2009/02/08', '13:50:00'),
+	(3899458,19241,'vehicle code violation','speeding','hit object','stopped','cloudy','dark with no street lights','wet','normal','2009/02/10', '2:30:00'),
+	(3899462,13604,'vehicle code violation','speeding','rear end','stopped','clear','daylight','dry','normal','2009/02/17','10:25:00'),
+	(3899466,19210,'vehicle code violation','speeding','hit object','slowing/stopping','clear','dark with street lights','dry','normal','2009/02/14','1:15:00'),
+	(3899469,19374,'vehicle code violation','speeding','sideswipe','slowing/stopping','cloudy','daylight','wet','normal','2009/02/12','16:35:00'),
+	(3899470,19018,'vehicle code violation','improper turning','hit object','proceeding straight','clear','daylight','dry','normal','2009/02/13','17:00:00'),
+	(3899473,18751,'other than driver','other than driver (or pedestrian)','hit object','proceeding straight','clear','dark with street lights','dry','normal','2009/02/15','22:25:00'),
+	(3899474,19005,'vehicle code violation','speeding','hit object','proceeding straight','raining','daylight','wet','normal','2009/02/14', '7:25:00'),
+	(3899477,15995,'vehicle code violation','automobile right of way','broadside','slowing/stopping','cloudy','daylight','dry','normal','2009/02/13','9:00:00');
+
+
+SELECT * from collisions;
+
+
+```
+
+
 Se concluye que se pueden estandarizar ciertas columnas del tipo VARCHAR a BOOLEAN como: 
 - party_sex, 
 - party_sobriety,
