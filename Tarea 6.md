@@ -8,7 +8,7 @@ Usar funciones de agregación para calcular:
 
 
 ```SQL
-SELECT AVG(party_number_injured) FROM LOCATION;
+SELECT AVG(party_number_injured) FROM location;
 
 
 SELECT CAST(sum(party_number_injured) as decimal) / count(party_number_injured) as decimal from location; 
@@ -17,32 +17,32 @@ SELECT CAST(sum(party_number_injured) as decimal) / count(party_number_injured) 
 [1 punto] mínimos o máximos
 
 ```SQL
---MINIMOS
+--MÍNIMOS
 SELECT party_number_injured 
-FROM LOCATION 
+FROM location 
 ORDER BY party_number_injured ASC
 LIMIT 1;
 
---MINIMOS
-SELECT MIN(party_number_injured) FROM LOCATION;
+--MÍNIMOS
+SELECT MIN(party_number_injured) FROM location;
 
---MAXIMOS
+--MÁXIMOS
 SELECT party_number_injured 
-FROM LOCATION 
+FROM location 
 ORDER BY party_number_injured DESC
 LIMIT 1;
 
- --MAXIMOS 
-SELECT MAX(party_number_injured) FROM LOCATION; 
+ --MÁXIMOS 
+SELECT MAX(party_number_injured) FROM location; 
 ```
 
 [4 puntos] cuantil cuyo resultado sea distinto a la mediana
 ```SQL
 --CUANTILES
 select
-  percentile_disc(0.25) within group (order by location.party_number_injured),
-  percentile_disc(0.5) within group (order by location.party_number_injured),
-  percentile_disc(0.75) within group (order by location.party_number_injured)
+  percentile_disc(0.25) within group (order by location.party_number_injured),--Q1
+  percentile_disc(0.5) within group (order by location.party_number_injured), --Q2
+  percentile_disc(0.75) within group (order by location.party_number_injured) --Q3
 from location;
 ```
 ```SQL 
